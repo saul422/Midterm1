@@ -3,6 +3,20 @@ using namespace std;
 
 const int MIN_NR = 10, MAX_NR = 99, MIN_LS = 5, MAX_LS = 20;
 
+
+//create a class every_other_element()
+//Output the data strucuture display odds and skip evens
+class every_other_elemet()
+{
+    //go through the list from the head
+
+    //display every other node 1,3,5
+
+    
+}
+
+
+
 class DoublyLinkedList {
 private:
     struct Node {
