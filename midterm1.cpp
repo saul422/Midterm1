@@ -227,25 +227,37 @@ while (current) {
         cout<< current->data<< " ";
     }
     current = current ->next;
+    print = !print;
+}
+cout << endl;
+
+
 }
 
     //display every other node 1,3,5
 
 
-}
 };
 
-int main() {
-    cout << MIN_NR + MIN_LS + MAX_NR + MAX_LS;  // dummy statement to avoid compiler warning
 
+int main() {
+  
+
+DoublyLinkedList dll;
 
 //add elements to the list
-
-
+for (int i = 1; i <=10; ++i)
+{
+    dll.push_back(i);
+}
 //print the full list
-
-
+cout << "Full list: ";
+dll.print();
 //print every other element `
-    
+cout<<endl;
+
+cout << "Every other element: ";
+dll.every_other_elemet();
+
     return 0;
 }
