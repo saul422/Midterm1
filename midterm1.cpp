@@ -12,7 +12,7 @@ class every_other_elemet()
 
     //display every other node 1,3,5
 
-    
+
 }
 
 
@@ -20,9 +20,10 @@ class every_other_elemet()
 class DoublyLinkedList {
 private:
     struct Node {
-        int data;
-        Node* prev;
-        Node* next;
+        int data;  // intializing a variable called data
+        Node* prev; // pointer to the previous node
+        Node* next; // pointer to the enxt node
+
         Node(int val, Node* p = nullptr, Node* n = nullptr) {
             data = val; 
             prev = p;
@@ -30,12 +31,13 @@ private:
         }
     };
 
+// Pointers to the head and tail of the list
     Node* head;
     Node* tail;
 
 public:
     DoublyLinkedList() { head = nullptr; tail = nullptr; }
-
+//initialize an empty list
     void insert_after(int value, int position) {
         if (position < 0) {
             cout << "Position must be >= 0." << endl;
@@ -66,7 +68,7 @@ public:
             tail = newNode;
         temp->next = newNode;
     }
-
+//create a function that deletes a variable from the node list
     void delete_val(int value) {
         if (!head) return;
 
@@ -89,7 +91,7 @@ public:
 
         delete temp;
     }
-
+//This function deletes a position
     void delete_pos(int pos) {
         if (!head) {
             cout << "List is empty." << endl;
