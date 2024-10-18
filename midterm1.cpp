@@ -4,16 +4,7 @@ using namespace std;
 const int MIN_NR = 10, MAX_NR = 99, MIN_LS = 5, MAX_LS = 20;
 
 
-//create a class every_other_element()
-//Output the data strucuture display odds and skip evens
-class every_other_elemet()
-{
-    //go through the list from the head
 
-    //display every other node 1,3,5
-
-
-}
 
 
 
@@ -128,7 +119,7 @@ public:
         temp->next->prev = tempPrev;
         delete temp;
     }
-
+// Adds a node to the tail of the list
     void push_back(int v) {
         Node* newNode = new Node(v);
         if (!tail)
@@ -139,7 +130,7 @@ public:
             tail = newNode;
         }
     }
-    
+// Adds a node to the head of the list
     void push_front(int v) {
         Node* newNode = new Node(v);
         if (!head)
@@ -150,7 +141,7 @@ public:
             head = newNode;
         }
     }
-    
+//It removes the first node in list
     void pop_front() {
 
         if (!head) {
@@ -168,7 +159,7 @@ public:
             head = tail = nullptr;
         delete temp;
     }
-
+// It removes the last node in the list
     void pop_back() {
         if (!tail) {
             cout << "List is empty." << endl;
@@ -185,6 +176,7 @@ public:
         delete temp;
     }
 
+//Deconstructor that deletes the entire list
     ~DoublyLinkedList() {
         while (head) {
             Node* temp = head;
@@ -217,11 +209,43 @@ public:
         }
         cout << endl;
     }
+
+    //create a class every_other_element()
+//Output the data strucuture display odds and skip evens
+void every_other_elemet()
+{
+    //go through the list from the head
+Node* current = head;
+if (!current)
+{
+    cout<< " List is empty"<< endl;
+    return;
+}
+bool print = true;
+while (current) {
+    if(print) {
+        cout<< current->data<< " ";
+    }
+    current = current ->next;
+}
+
+    //display every other node 1,3,5
+
+
+}
 };
 
 int main() {
     cout << MIN_NR + MIN_LS + MAX_NR + MAX_LS;  // dummy statement to avoid compiler warning
 
+
+//add elements to the list
+
+
+//print the full list
+
+
+//print every other element `
     
     return 0;
 }
